@@ -35,7 +35,18 @@ tr.table-back td {
     background-color: rgba(0, 100, 0, 0.02) !important;
 }
 
-.cutout {
-    position: absolute;
-    mix-blend-mode: screen;
+label {
+    font-size: 12px !important;
+}
+
+body {
+    font-size: 12px !important;
+}
+
+td {
+    font-size: 12px !important;
+}
+
+.v-input__slot {
+    font-size: 12px;
 }

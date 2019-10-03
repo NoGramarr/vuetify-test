@@ -7,8 +7,8 @@
       <v-flex xs12 lg9 xl8>
 
         <v-card class="my-3 elevation-3">
-          <v-card-title class="white--text primary">
-            <v-icon left color="white">fas fa-info-circle</v-icon> product details
+          <v-card-title class="white--text primary body-1">
+            <v-icon left small color="white">fas fa-info-circle</v-icon> product details
           </v-card-title>
           <v-divider/>
           <v-layout row class="pa-5">
@@ -20,7 +20,7 @@
               <v-menu offset-y :close-on-content-click="false">
                 <template v-slot:activator="{ on }">
                   <div class="text-center">
-                    <v-btn text v-on="on" style="width: 100%;">Options <v-icon small class="ml-2">fas fa-arrow-down</v-icon></v-btn>
+                    <v-btn small text v-on="on" style="width: 100%;">Options <v-icon small class="ml-2">fas fa-arrow-down</v-icon></v-btn>
                   </div>
                 </template>
                 <v-list>
@@ -52,7 +52,7 @@
             </v-flex>
 
             <v-flex xs12 sm6 md4 class="text-center">
-              star rating:<v-rating :half-increments="true" id="rating" background-color="primary" color="primary"></v-rating>
+              star rating:<v-rating :half-increments="true" class="mb-4" id="rating" background-color="primary" color="primary"></v-rating>
               <v-text-field class="ma-2" hide-details outlined filled label="email"></v-text-field>
               <v-text-field class="ma-2" hide-details outlined filled label="tel"></v-text-field>
               <v-menu nudge-width offset-y :close-on-content-click="false">
@@ -95,14 +95,14 @@
         </v-card>
 
         <v-card class="my-3 elevation-3">
-          <v-card-title class="white--text primary">
+          <v-card-title class="white--text primary body-1">
             <v-flex xs12 sm6>
-              <v-icon left color="white">fas fa-user-friends</v-icon> rooms and passengers
+              <v-icon small left color="white">fas fa-user-friends</v-icon> rooms and passengers
             </v-flex>
             <v-flex xs12 sm6>
               <div class="text-right">
-                <v-btn text class="ml-2 white--text text-lowercase"><v-icon small class="mr-2">fas fa-plus</v-icon>add room</v-btn>
-                <v-btn text class="ml-2 white--text text-lowercase"><v-icon small class="mr-2">fas fa-edit</v-icon>edit passengers</v-btn>
+                <v-btn small text class="ml-2 white--text text-lowercase"><v-icon small class="mr-2">fas fa-plus</v-icon>add room</v-btn>
+                <v-btn small text class="ml-2 white--text text-lowercase"><v-icon small class="mr-2">fas fa-edit</v-icon>edit passengers</v-btn>
               </div>
             </v-flex>
           </v-card-title>
@@ -110,23 +110,15 @@
           <div class="scrollable">
             <v-simple-table class="my-3" style="min-width: 800px;">
               <template v-slot:default>
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th class="text-center">room category</th>
-                    <th class="text-center">room name</th>
-                    <th class="text-center">meal basis</th>
-                  </tr>
-                </thead>
                 <tbody>
                   <tr class="table-back">
                     <td>1.</td>
-                    <td class="text-left"><v-select hide-details :items="testValues"></v-select></td>
-                    <td class="text-left"><v-select hide-details :items="testValues"></v-select></td>
+                    <td class="text-left"><v-select outlined hide-details label="room category" :items="testValues"></v-select></td>
+                    <td class="text-left"><v-select outlined hide-details label="room name" :items="testValues"></v-select></td>
                     <td class="text-left">
                       <v-layout>
                         <v-flex xs6>
-                          <v-text-field outlined filled hide-details value="RO"></v-text-field>
+                          <v-text-field outlined filled hide-details label="meal basis"></v-text-field>
                         </v-flex>
                         <v-flex xs6>
                           <v-select outlined filled hide-details :items="testValues" value="Room Only"></v-select>
@@ -139,7 +131,7 @@
                       <v-menu offset-y :close-on-content-click="false">
                         <template v-slot:activator="{ on }">
                           <div>
-                            <v-btn class="text-lowercase primary ma-2" v-on="on">passengers<v-icon class="ml-2" small>fas fa-arrow-right</v-icon></v-btn>
+                            <v-btn small class="text-lowercase primary ma-2" v-on="on">passengers<v-icon class="ml-2" small>fas fa-arrow-right</v-icon></v-btn>
                           </div>
                         </template>
                         <v-list>
@@ -160,13 +152,13 @@
         </v-card>
 
         <v-card class="my-3 elevation-3">
-          <v-card-title class="white--text primary">
+          <v-card-title class="white--text primary body-1">
             <v-flex xs12 sm6>
-              <v-icon left color="white">fas fa-tag</v-icon> client price details
+              <v-icon small left color="white">fas fa-tag</v-icon> client price details
             </v-flex>
             <v-flex xs12 sm6>
               <div class="text-right">
-                <v-btn text class="ml-2 white--text text-lowercase"><v-icon small left>fas fa-plus</v-icon>add</v-btn>
+                <v-btn small text class="ml-2 white--text text-lowercase"><v-icon small left>fas fa-plus</v-icon>add</v-btn>
               </div>
             </v-flex>
           </v-card-title>
@@ -174,27 +166,15 @@
           <div class="scrollable">
             <v-simple-table class="my-3" style="min-width: 1000px;">
               <template v-slot:default>
-                <thead>
-                  <tr>
-                    <th class="text-center">label</th>
-                    <th class="text-center">count</th>
-                    <th class="text-center">gross</th>
-                    <th class="text-center">tax</th>
-                    <th class="text-center">product</th>
-                    <th class="text-center">vat rate</th>
-                    <th class="text-center">vat</th>
-                    <th class="text-center">total</th>
-                  </tr>
-                </thead>
                 <tbody>
                   <tr class="table-back">
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-select hide-details :items="testValues"></v-select></td>
-                    <td class="text-left"><v-select hide-details :items="testValues"></v-select></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined hide-details label="label"></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined hide-details label="count"></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined hide-details label="gross"></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined hide-details label="tax"></v-text-field></td>
+                    <td class="text-left"><v-select outlined hide-details label="product" :items="testValues"></v-select></td>
+                    <td class="text-left"><v-select outlined hide-details label="vat rate" :items="testValues"></v-select></td>
+                    <td class="text-left"><v-text-field outlined hide-details label="vat"></v-text-field></td>
                     <td class="text-center">{{clientDetailsTotal}}</td>
                   </tr>
                   <tr>
@@ -214,9 +194,9 @@
         </v-card>
 
         <v-card class="my-3 elevation-3">
-          <v-card-title class="white--text primary">
+          <v-card-title class="white--text primary body-1">
             <v-flex xs12 sm6>
-              <v-icon left color="white">fas fa-tags</v-icon> purchase cost details
+              <v-icon small left color="white">fas fa-tags</v-icon> purchase cost details
             </v-flex>
             <v-flex xs4 sm2>
               <div class="text-right">
@@ -228,7 +208,7 @@
             </v-flex>
             <v-flex xs4 sm3>
               <div class="text-right">
-                <v-btn text class="ml-2 white--text text-lowercase"><v-icon small left>fas fa-plus</v-icon>add</v-btn>
+                <v-btn small text class="ml-2 white--text text-lowercase"><v-icon small left>fas fa-plus</v-icon>add</v-btn>
               </div>
             </v-flex>
           </v-card-title>
@@ -236,27 +216,15 @@
           <div class="scrollable">
             <v-simple-table class="my-3" style="min-width: 1000px;">
               <template v-slot:default>
-                <thead>
-                  <tr>
-                    <th class="text-center">label</th>
-                    <th class="text-center">count</th>
-                    <th class="text-center">gross</th>
-                    <th class="text-center">tax</th>
-                    <th class="text-center">comm</th>
-                    <th class="text-center">vat</th>
-                    <th></th>
-                    <th class="text-center">total</th>
-                  </tr>
-                </thead>
                 <tbody>
                   <tr class="table-back">
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field hide-details></v-text-field></td>
-                    <td class="text-left"><v-btn text><v-icon>fas fa-arrow-up</v-icon></v-btn></td>
+                    <td class="text-left"><v-text-field outlined label="label" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined label="count" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined label="gross" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined label="tax" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined label="comm" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field outlined label="vat" hide-details></v-text-field></td>
+                    <td class="text-left"><v-btn small text><v-icon>fas fa-arrow-up</v-icon></v-btn></td>
                     <td class="text-center">{{clientDetailsTotal}}</td>
                   </tr>
                   <tr>
@@ -275,8 +243,8 @@
           </div>
         </v-card>
         <v-card class="my-3 elevation-3">
-          <v-card-title class="white--text primary">
-            <v-icon left color="white">fas fa-barcode</v-icon> totals
+          <v-card-title class="white--text primary body-1">
+            <v-icon small left color="white">fas fa-barcode</v-icon> totals
           </v-card-title>
           <v-divider/>
             <v-layout justify-center>
@@ -312,8 +280,8 @@
         </v-card>
 
         <v-layout justify-center row>
-          <v-btn class="accent white--text elevation-12" text width="120"><v-icon left>fas fa-times</v-icon> Cancel</v-btn>
-          <v-btn class="primary white--text elevation-13" text width="120"><v-icon left>far fa-save</v-icon> Save</v-btn>
+          <v-btn small class="accent white--text elevation-12" text width="120"><v-icon left>fas fa-times</v-icon> Cancel</v-btn>
+          <v-btn small class="primary white--text elevation-13" text width="120"><v-icon left>far fa-save</v-icon> Save</v-btn>
         </v-layout>
       </v-flex>
     </v-layout>
