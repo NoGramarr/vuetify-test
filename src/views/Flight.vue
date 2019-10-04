@@ -4,18 +4,18 @@
       align-center
       justify-center
       fill-height>
-      <v-flex xs12 lg9 xl8>
+      <v-flex xs12 xl9>
         <v-card class="my-3 elevation-3">
           <v-card-title class="white--text primary body-1">
             <v-icon small left color="white">fas fa-info-circle</v-icon> product details
           </v-card-title>
           <v-divider/>
-          <v-layout row class="pa-5">
+          <v-layout row class="pa-3">
             <v-flex xs12 sm6>
-              <v-text-field class="ma-2" hide-details outlined filled label="supplier" append-icon="fas fa-plus" @click:append="logIt"></v-text-field>
-              <v-select class="ma-2" hide-details outlined filled label="supplier status" :items="testValues"></v-select>
-              <v-text-field class="ma-2" hide-details outlined filled label="pnr conf no"></v-text-field>
-              <v-select class="ma-2" hide-details outlined filled label="product type"  :items="testValues"></v-select>
+              <v-text-field class="ma-1" dense hide-details outlined filled label="supplier" append-icon="fas fa-plus" @click:append="logIt"></v-text-field>
+              <v-select class="ma-1" hide-details outlined filled label="supplier status" :items="testValues"></v-select>
+              <v-text-field class="ma-1" dense hide-details outlined filled label="pnr conf no"></v-text-field>
+              <v-select class="ma-1" hide-details outlined filled label="product type"  :items="testValues"></v-select>
               <v-menu offset-y :close-on-content-click="false">
                 <template v-slot:activator="{ on }">
                   <div class="text-center">
@@ -32,13 +32,13 @@
               </v-menu>
             </v-flex>
             <v-flex xs12 sm6>
-              <v-select class="ma-2" hide-details outlined filled label="flight type" :items="testValues"></v-select>
-              <v-select class="ma-2" hide-details outlined filled label="route type" :items="testValues"></v-select>
-              <v-text-field class="ma-2" hide-details outlined filled label="airline"></v-text-field>
-              <v-select class="ma-2" hide-details outlined filled label="cabin type" :items="testValues"></v-select>
+              <v-text-field class="ma-1" dense hide-details outlined filled label="airline"></v-text-field>
+              <v-select class="ma-1" hide-details outlined filled label="flight type" :items="testValues"></v-select>
+              <v-select class="ma-1" hide-details outlined filled label="route type" :items="testValues"></v-select>
+              <v-select class="ma-1" hide-details outlined filled label="cabin type" :items="testValues"></v-select>
               <v-menu nudge-width offset-y :close-on-content-click="false">
                 <template v-slot:activator="{ on }">
-                  <v-text-field :value="ticketingDeadline" v-on="on" class="ma-2" hide-details outlined filled label="ticketing deadline" readonly></v-text-field>
+                  <v-text-field :value="ticketingDeadline" v-on="on" class="ma-1" hide-details outlined filled label="ticketing deadline" readonly></v-text-field>
                 </template>
                 <v-card>
                   <v-card-text>
@@ -50,7 +50,7 @@
               </v-menu>
             </v-flex>
             <v-flex xs12>
-              <v-textarea label="notes" class="ma-2" outlined filled>
+              <v-textarea dense label="notes" class="ma-1" outlined filled>
               </v-textarea>
             </v-flex>
           </v-layout>
@@ -82,12 +82,12 @@
                   </tr>
                   <tr class="table-back">
                     <td class="text-left">
-                      <v-text-field outlined label="from" hide-details></v-text-field>
+                      <v-text-field dense outlined label="from" hide-details></v-text-field>
                     </td>
                     <td class="text-left">
                       <v-menu nudge-width offset-y :close-on-content-click="false">
                         <template v-slot:activator="{ on }">
-                          <v-text-field outlined label="departure" :value="departureDateAndTime" v-on="on" class="ma-2" hide-details readonly></v-text-field>
+                          <v-text-field dense outlined label="departure" :value="departureDateAndTime" v-on="on" class="ma-2" hide-details readonly></v-text-field>
                         </template>
                         <v-card>
                           <v-card-text>
@@ -102,12 +102,12 @@
                       </v-menu>
                     </td>
                     <td class="text-left">
-                      <v-text-field outlined label="to" hide-details></v-text-field>
+                      <v-text-field dense outlined label="to" hide-details></v-text-field>
                     </td>
                     <td class="text-left">
                       <v-menu nudge-width offset-y :close-on-content-click="false">
                         <template v-slot:activator="{ on }">
-                          <v-text-field outlined label="arrival" :value="arrivalDateAndTime" v-on="on" class="ma-2" hide-details readonly></v-text-field>
+                          <v-text-field dense outlined label="arrival" :value="arrivalDateAndTime" v-on="on" class="ma-2" hide-details readonly></v-text-field>
                         </template>
                         <v-card>
                           <v-card-text>
@@ -122,13 +122,13 @@
                       </v-menu>
                     </td>
                     <td class="text-left">
-                      <v-text-field outlined label="airline" hide-details></v-text-field>
+                      <v-text-field dense outlined label="airline" hide-details></v-text-field>
                     </td>
                     <td class="text-left">
-                      <v-text-field outlined label="flight no" hide-details></v-text-field>
+                      <v-text-field dense outlined label="flight no" hide-details></v-text-field>
                     </td>
                     <td class="text-left">
-                      <v-select class="ma-2" outlined label="cabin" hide-details :items="testValues"></v-select>
+                      <v-select dense class="ma-2" outlined label="cabin" hide-details :items="testValues"></v-select>
                     </td>
                   </tr>
                   <tr>
@@ -138,12 +138,12 @@
                   </tr>
                   <tr class="table-back">
                     <td class="text-left">
-                      <v-text-field outlined label="from" hide-details></v-text-field>
+                      <v-text-field dense outlined label="from" hide-details></v-text-field>
                     </td>
                     <td class="text-left">
                       <v-menu nudge-width offset-y :close-on-content-click="false">
                         <template v-slot:activator="{ on }">
-                          <v-text-field outlined label="departure" :value="departureDateAndTime" v-on="on" class="ma-2" hide-details readonly></v-text-field>
+                          <v-text-field dense outlined label="departure" :value="departureDateAndTime" v-on="on" class="ma-2" hide-details readonly></v-text-field>
                         </template>
                         <v-card>
                           <v-card-text>
@@ -158,12 +158,12 @@
                       </v-menu>
                     </td>
                     <td class="text-left">
-                      <v-text-field outlined label="to" hide-details></v-text-field>
+                      <v-text-field dense outlined label="to" hide-details></v-text-field>
                     </td>
                     <td class="text-left">
                       <v-menu nudge-width offset-y :close-on-content-click="false">
                         <template v-slot:activator="{ on }">
-                          <v-text-field outlined label="arrival" :value="arrivalDateAndTime" v-on="on" class="ma-2" hide-details readonly></v-text-field>
+                          <v-text-field dense outlined label="arrival" :value="arrivalDateAndTime" v-on="on" class="ma-2" hide-details readonly></v-text-field>
                         </template>
                         <v-card>
                           <v-card-text>
@@ -178,13 +178,13 @@
                       </v-menu>
                     </td>
                     <td class="text-left">
-                      <v-text-field outlined label="airline" hide-details></v-text-field>
+                      <v-text-field dense outlined label="airline" hide-details></v-text-field>
                     </td>
                     <td class="text-left">
-                      <v-text-field outlined label="flight no" hide-details></v-text-field>
+                      <v-text-field dense outlined label="flight no" hide-details></v-text-field>
                     </td>
                     <td class="text-left">
-                      <v-select class="ma-2" outlined label="cabin" hide-details :items="testValues"></v-select>
+                      <v-select dense class="ma-2" outlined label="cabin" hide-details :items="testValues"></v-select>
                     </td>
                   </tr>
                 </tbody>
@@ -209,13 +209,13 @@
               <template v-slot:default>
                 <tbody>
                   <tr class="table-back">
-                    <td class="text-left"><v-text-field outlined hide-details label="label"></v-text-field></td>
-                    <td class="text-left"><v-text-field outlined hide-details label="count"></v-text-field></td>
-                    <td class="text-left"><v-text-field outlined hide-details label="gross"></v-text-field></td>
-                    <td class="text-left"><v-text-field outlined hide-details label="tax"></v-text-field></td>
-                    <td class="text-left"><v-select outlined hide-details label="product" :items="testValues"></v-select></td>
-                    <td class="text-left"><v-select outlined hide-details label="vat rate" :items="testValues"></v-select></td>
-                    <td class="text-left"><v-text-field outlined hide-details label="vat"></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined hide-details label="label"></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined hide-details label="count"></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined hide-details label="gross"></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined hide-details label="tax"></v-text-field></td>
+                    <td class="text-left"><v-select outlined dense hide-details label="product" :items="testValues"></v-select></td>
+                    <td class="text-left"><v-select outlined dense hide-details label="vat rate" :items="testValues"></v-select></td>
+                    <td class="text-left"><v-text-field outlined dense hide-details label="vat"></v-text-field></td>
                     <td class="text-center">{{clientDetailsTotal}}</td>
                   </tr>
                   <tr>
@@ -245,7 +245,7 @@
               </div>
             </v-flex>
             <v-flex xs4 sm1>
-              <v-text-field class="ml-2" color="white" background-color="grey lighten-3"></v-text-field>
+              <v-text-field dense single-line hide-details class="ml-2" color="white" background-color="grey lighten-3"></v-text-field>
             </v-flex>
             <v-flex xs4 sm3>
               <div class="text-right">
@@ -259,12 +259,12 @@
               <template v-slot:default>
                 <tbody>
                   <tr class="table-back">
-                    <td class="text-left"><v-text-field outlined label="label" hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field outlined label="count" hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field outlined label="gross" hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field outlined label="tax" hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field outlined label="comm" hide-details></v-text-field></td>
-                    <td class="text-left"><v-text-field outlined label="vat" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined label="count" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined label="label" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined label="gross" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined label="tax" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined label="comm" hide-details></v-text-field></td>
+                    <td class="text-left"><v-text-field dense outlined label="vat" hide-details></v-text-field></td>
                     <td class="text-left"><v-btn small text><v-icon>fas fa-arrow-up</v-icon></v-btn></td>
                     <td class="text-center">{{clientDetailsTotal}}</td>
                   </tr>

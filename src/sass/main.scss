@@ -1,0 +1,5 @@
+$font-size-root: 12px;
+@import '~vuetify/src/styles/styles.sass';
+
+@import '~vuetify/src/components/VBtn/_variables.scss';
+$btn-font-sizes: map-merge($btn-font-sizes, (default: 10px, large: 10px));

@@ -2,14 +2,16 @@ import Vue from 'vue'
 import Vuetify, {
   VCheckbox,
   VIcon,
-  VDatePicker
+  VDatePicker,
+  VBtn
 } from 'vuetify/lib'
 
 Vue.use(Vuetify, {
   components: {
     VCheckbox,
     VIcon,
-    VDatePicker
+    VDatePicker,
+    VBtn
   }
 })
 
